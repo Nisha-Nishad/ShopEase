@@ -1,6 +1,8 @@
 import crypto from 'crypto';
 import os from 'os';
+import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
+import Visitor from '../models/Visitor.js';
 import sendTokenResponse from '../utils/generateToken.js';
 import sendEmail from '../utils/sendEmail.js';
 
@@ -476,6 +478,107 @@ export const changePassword = async (req, res, next) => {
     await user.save();
 
     sendTokenResponse(user, 200, res, 'Password updated successfully');
+  } catch (error) {
+    next(error);
+  }
+};
+
+/**
+ * @desc    Automatically track website link click / visit & associate visitor email when available
+ * @route   POST /api/auth/track-visit
+ * @access  Public
+ */
+export const trackWebsiteVisit = async (req, res, next) => {
+  try {
+    const rawVisitorId = String(req.body?.visitorId || '').trim();
+    const lastPath = String(req.body?.path || '/').slice(0, 180);
+    const shouldIncrement = req.body?.increment !== false;
+
+    // 1. Check if visitor has an active JWT cookie (logged-in customer/admin)
+    let matchedUser = null;
+    if (req.cookies?.token) {
+      try {
+        const decoded = jwt.verify(req.cookies.token, process.env.JWT_SECRET);
+        matchedUser = await User.findById(decoded.id).select('name email');
+      } catch {
+        matchedUser = null;
+      }
+    }
+
+    const email = (
+      matchedUser?.email ||
+      String(req.body?.email || '')
+    )
+      .trim()
+      .toLowerCase();
+    const name = (
+      matchedUser?.name ||
+      String(req.body?.name || '')
+    ).trim();
+
+    const userAgent = String(req.headers['user-agent'] || '').slice(0, 300);
+    const ipAddress = String(
+      req.headers['x-forwarded-for']?.split(',')[0]?.trim() ||
+        req.ip ||
+        req.socket?.remoteAddress ||
+        ''
+    );
+
+    let deviceType = 'Desktop';
+    if (/ipad|tablet/i.test(userAgent)) {
+      deviceType = 'Tablet';
+    } else if (/mobile|android|iphone|ipod/i.test(userAgent)) {
+      deviceType = 'Mobile';
+    }
+
+    const visitorId =
+      rawVisitorId ||
+      crypto
+        .createHash('sha256')
+        .update(`${ipAddress}-${userAgent}`)
+        .digest('hex')
+        .slice(0, 24);
+
+    // 2. Find existing visitor record by visitorId or email
+    let visitor = await Visitor.findOne({ visitorId });
+    if (!visitor && email) {
+      visitor = await Visitor.findOne({ email });
+    }
+
+    if (visitor) {
+      if (shouldIncrement) {
+        visitor.visitCount = (visitor.visitCount || 1) + 1;
+      }
+      if (email) visitor.email = email;
+      if (name) visitor.name = name;
+      if (matchedUser?._id) visitor.user = matchedUser._id;
+      visitor.deviceType = deviceType;
+      visitor.ipAddress = ipAddress;
+      visitor.userAgent = userAgent;
+      visitor.lastPath = lastPath;
+      visitor.lastVisitedAt = new Date();
+      await visitor.save();
+    } else {
+      visitor = await Visitor.create({
+        visitorId,
+        user: matchedUser?._id || null,
+        name,
+        email,
+        visitCount: 1,
+        deviceType,
+        ipAddress,
+        userAgent,
+        lastPath,
+        firstVisitedAt: new Date(),
+        lastVisitedAt: new Date(),
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      visitorId: visitor.visitorId,
+      visitCount: visitor.visitCount,
+    });
   } catch (error) {
     next(error);
   }

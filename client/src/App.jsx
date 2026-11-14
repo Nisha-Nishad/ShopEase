@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchCurrentUser } from './redux/slices/authSlice';
 import { syncAndMergeCart } from './redux/slices/cartSlice';
 import { fetchWishlist } from './redux/slices/wishlistSlice';
+import api from './services/api';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProtectedRoute from './routes/ProtectedRoute';
@@ -34,14 +35,50 @@ const PageLoader = () => (
 
 const App = () => {
   const dispatch = useDispatch();
-  const { isAuthenticated, initializing } = useSelector((state) => state.auth);
+  const { user, isAuthenticated, initializing } = useSelector(
+    (state) => state.auth
+  );
 
   // 1. Check if user has a valid httpOnly JWT cookie on app load
   useEffect(() => {
     dispatch(fetchCurrentUser());
   }, [dispatch]);
 
-  // 2. Whenever auth initialization finishes or login state changes,
+  // 2. Automatically track website link click & associate user email in MongoDB
+  useEffect(() => {
+    if (initializing) return;
+
+    let visitorId = localStorage.getItem('shopease_visitor_id');
+    if (!visitorId) {
+      visitorId = `v_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 10)}`;
+      localStorage.setItem('shopease_visitor_id', visitorId);
+    }
+
+    const alreadyCountedThisTab = sessionStorage.getItem(
+      'shopease_visit_tracked'
+    );
+    const shouldIncrement = !alreadyCountedThisTab;
+
+    api
+      .post('/auth/track-visit', {
+        visitorId,
+        path: window.location.pathname,
+        increment: shouldIncrement,
+        email: user?.email || '',
+        name: user?.name || '',
+      })
+      .then((res) => {
+        if (res.data?.visitorId) {
+          localStorage.setItem('shopease_visitor_id', res.data.visitorId);
+        }
+        sessionStorage.setItem('shopease_visit_tracked', '1');
+      })
+      .catch(() => {
+        // Ignore network errors silently so user experience is unaffected
+      });
+  }, [initializing, isAuthenticated, user?.email, user?.name]);
+
+  // 3. Whenever auth initialization finishes or login state changes,
   // sync & merge guest localStorage cart/wishlist with MongoDB
   useEffect(() => {
     if (!initializing) {

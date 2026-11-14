@@ -10,6 +10,7 @@ import {
   resetPassword,
   updateProfile,
   changePassword,
+  trackWebsiteVisit,
 } from '../controllers/authController.js';
 import { protect } from '../middleware/authMiddleware.js';
 import { authLimiter } from '../middleware/securityMiddleware.js';
@@ -31,6 +32,7 @@ router.post('/verify-otp', authLimiter, validate(verifyOtpSchema), verifyEmailOt
 router.post('/resend-otp', authLimiter, validate(resendOtpSchema), resendEmailOtp);
 router.post('/login', authLimiter, validate(loginSchema), loginUser);
 router.post('/logout', logoutUser);
+router.post('/track-visit', trackWebsiteVisit);
 router.post(
   '/forgot-password',
   authLimiter,

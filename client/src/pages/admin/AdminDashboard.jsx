@@ -12,6 +12,10 @@ import {
   Download,
   AlertTriangle,
   IndianRupee,
+  MousePointerClick,
+  Mail,
+  Smartphone,
+  Monitor,
 } from 'lucide-react';
 
 const MONTH_NAMES = [
@@ -46,7 +50,7 @@ const AdminDashboard = () => {
         setLoading(false);
       }
     };
-    if (activeTab === 'overview') {
+    if (activeTab === 'overview' || activeTab === 'visitors') {
       fetchStats();
     }
   }, [activeTab]);
@@ -74,9 +78,13 @@ const AdminDashboard = () => {
     totalOrders: 0,
     totalUsers: 0,
     totalProducts: 0,
+    totalWebsiteClicks: 0,
+    uniqueVisitors: 0,
+    visitorsWithEmail: 0,
   };
   const lowStockProducts = dashboardData?.lowStockProducts || [];
   const monthlyRevenue = dashboardData?.monthlyRevenue || [];
+  const visitors = dashboardData?.visitors || [];
   const maxMonthRev = Math.max(
     1,
     ...monthlyRevenue.map((m) => m.revenue || 0)
@@ -109,6 +117,7 @@ const AdminDashboard = () => {
       <div className="flex flex-wrap gap-2 border-b border-slate-200 pb-3">
         {[
           { id: 'overview', label: 'Dashboard Overview', icon: LayoutDashboard },
+          { id: 'visitors', label: 'Visitors & Link Clicks', icon: MousePointerClick },
           { id: 'products', label: 'Products & Categories', icon: Package },
           { id: 'orders', label: 'Orders', icon: ShoppingBag },
           { id: 'users', label: 'Users & Coupons', icon: Users },
@@ -136,7 +145,7 @@ const AdminDashboard = () => {
       {activeTab === 'overview' && (
         <div className="space-y-6">
           {/* KPI Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             <div className="bg-white rounded-2xl border border-slate-200 p-5 flex items-center gap-4">
               <div className="p-3 rounded-xl bg-indigo-50 text-indigo-600">
                 <IndianRupee className="w-6 h-6" />
@@ -189,6 +198,26 @@ const AdminDashboard = () => {
                 </p>
                 <p className="text-xl font-extrabold text-slate-900">
                   {stats.totalUsers}
+                </p>
+              </div>
+            </div>
+
+            <div
+              onClick={() => setActiveTab('visitors')}
+              className="bg-white rounded-2xl border border-slate-200 p-5 flex items-center gap-4 cursor-pointer hover:border-indigo-300 transition-colors"
+            >
+              <div className="p-3 rounded-xl bg-sky-50 text-sky-600">
+                <MousePointerClick className="w-6 h-6" />
+              </div>
+              <div>
+                <p className="text-xs text-slate-500 font-medium">
+                  Web Link Clicks
+                </p>
+                <p className="text-xl font-extrabold text-slate-900">
+                  {stats.totalWebsiteClicks}
+                </p>
+                <p className="text-[11px] text-slate-400">
+                  {stats.uniqueVisitors} visitors ({stats.visitorsWithEmail} emails)
                 </p>
               </div>
             </div>
@@ -273,6 +302,144 @@ const AdminDashboard = () => {
                 </div>
               )}
             </div>
+          </div>
+        </div>
+      )}
+
+      {activeTab === 'visitors' && (
+        <div className="space-y-6">
+          {/* Summary Banner */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="bg-white rounded-2xl border border-slate-200 p-5 flex items-center gap-4">
+              <div className="p-3 rounded-xl bg-indigo-50 text-indigo-600">
+                <MousePointerClick className="w-6 h-6" />
+              </div>
+              <div>
+                <p className="text-xs text-slate-500 font-medium">
+                  Total Website Link Clicks
+                </p>
+                <p className="text-2xl font-extrabold text-slate-900">
+                  {stats.totalWebsiteClicks}
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl border border-slate-200 p-5 flex items-center gap-4">
+              <div className="p-3 rounded-xl bg-emerald-50 text-emerald-600">
+                <Users className="w-6 h-6" />
+              </div>
+              <div>
+                <p className="text-xs text-slate-500 font-medium">
+                  Unique Website Visitors
+                </p>
+                <p className="text-2xl font-extrabold text-slate-900">
+                  {stats.uniqueVisitors}
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl border border-slate-200 p-5 flex items-center gap-4">
+              <div className="p-3 rounded-xl bg-amber-50 text-amber-600">
+                <Mail className="w-6 h-6" />
+              </div>
+              <div>
+                <p className="text-xs text-slate-500 font-medium">
+                  Visitors With Email Saved
+                </p>
+                <p className="text-2xl font-extrabold text-slate-900">
+                  {stats.visitorsWithEmail}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Visitor & Email Log Table */}
+          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+            <div className="px-6 py-4 border-b border-slate-100 flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h2 className="text-base font-bold text-slate-900">
+                  Website Visitors &amp; Email Click Tracker
+                </h2>
+                <p className="text-xs text-slate-500">
+                  Automatically tracks every website link click and saves visitor email &amp; visit count in MongoDB
+                </p>
+              </div>
+              <span className="text-xs font-semibold bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full">
+                {visitors.length} Visitor Records
+              </span>
+            </div>
+
+            {visitors.length === 0 ? (
+              <div className="p-8 text-center text-sm text-slate-500">
+                No visitor records yet. Refresh the website to see your first tracked visit!
+              </div>
+            ) : (
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse text-sm">
+                  <thead>
+                    <tr className="bg-slate-50 text-slate-600 text-xs uppercase tracking-wider border-b border-slate-200">
+                      <th className="py-3 px-4 font-semibold">Visitor Email &amp; Name</th>
+                      <th className="py-3 px-4 font-semibold">Web Link Clicks</th>
+                      <th className="py-3 px-4 font-semibold">Device</th>
+                      <th className="py-3 px-4 font-semibold">Last Page</th>
+                      <th className="py-3 px-4 font-semibold">Last Visited</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {visitors.map((v) => (
+                      <tr key={v._id} className="hover:bg-slate-50/70 transition-colors">
+                        <td className="py-3 px-4">
+                          {v.email ? (
+                            <div>
+                              <p className="font-bold text-slate-900">{v.email}</p>
+                              {v.name && (
+                                <p className="text-xs text-slate-500">{v.name}</p>
+                              )}
+                            </div>
+                          ) : (
+                            <div>
+                              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600">
+                                Guest Visitor (Not Logged In)
+                              </span>
+                              <p className="text-[11px] text-slate-400 mt-0.5 font-mono">
+                                ID: {v.visitorId?.slice(0, 14)}
+                              </p>
+                            </div>
+                          )}
+                        </td>
+                        <td className="py-3 px-4">
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-indigo-50 text-indigo-700 border border-indigo-200/60">
+                            <MousePointerClick className="w-3.5 h-3.5" />
+                            {v.visitCount} {v.visitCount === 1 ? 'click' : 'clicks'}
+                          </span>
+                        </td>
+                        <td className="py-3 px-4">
+                          <span className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-700">
+                            {v.deviceType === 'Mobile' ? (
+                              <Smartphone className="w-4 h-4 text-indigo-500" />
+                            ) : (
+                              <Monitor className="w-4 h-4 text-slate-500" />
+                            )}
+                            {v.deviceType || 'Desktop'}
+                          </span>
+                        </td>
+                        <td className="py-3 px-4 text-xs font-mono text-slate-600">
+                          {v.lastPath || '/'}
+                        </td>
+                        <td className="py-3 px-4 text-xs text-slate-500">
+                          {v.lastVisitedAt
+                            ? new Date(v.lastVisitedAt).toLocaleString('en-IN', {
+                                dateStyle: 'medium',
+                                timeStyle: 'short',
+                              })
+                            : '-'}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
           </div>
         </div>
       )}

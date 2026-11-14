@@ -2,9 +2,10 @@ import Order from '../models/Order.js';
 import Product from '../models/Product.js';
 import User from '../models/User.js';
 import Category from '../models/Category.js';
+import Visitor from '../models/Visitor.js';
 
 /**
- * @desc    Get Admin Dashboard Analytics (Sales, Orders, Users, Low Stock, Monthly Revenue)
+ * @desc    Get Admin Dashboard Analytics (Sales, Orders, Users, Low Stock, Monthly Revenue, Website Visitors)
  * @route   GET /api/admin/stats
  * @access  Private (Admin / Manager)
  */
@@ -19,6 +20,8 @@ export const getDashboardStats = async (req, res, next) => {
       recentOrders,
       revenueAgg,
       monthlyRevenue,
+      visitorAgg,
+      recentVisitors,
     ] = await Promise.all([
       User.countDocuments(),
       Product.countDocuments(),
@@ -59,10 +62,34 @@ export const getDashboardStats = async (req, res, next) => {
         { $sort: { '_id.year': -1, '_id.month': -1 } },
         { $limit: 6 },
       ]),
+      Visitor.aggregate([
+        {
+          $group: {
+            _id: null,
+            totalWebsiteClicks: { $sum: '$visitCount' },
+            uniqueVisitors: { $sum: 1 },
+            visitorsWithEmail: {
+              $sum: {
+                $cond: [
+                  { $and: [{ $ne: ['$email', ''] }, { $ne: ['$email', null] }] },
+                  1,
+                  0,
+                ],
+              },
+            },
+          },
+        },
+      ]),
+      Visitor.find()
+        .sort({ lastVisitedAt: -1 })
+        .limit(100),
     ]);
 
     const totalRevenue = revenueAgg[0]?.totalRevenue || 0;
     const paidRevenue = revenueAgg[0]?.paidRevenue || 0;
+    const totalWebsiteClicks = visitorAgg[0]?.totalWebsiteClicks || 0;
+    const uniqueVisitors = visitorAgg[0]?.uniqueVisitors || 0;
+    const visitorsWithEmail = visitorAgg[0]?.visitorsWithEmail || 0;
 
     res.status(200).json({
       success: true,
@@ -73,10 +100,14 @@ export const getDashboardStats = async (req, res, next) => {
         totalUsers,
         totalProducts,
         totalCategories,
+        totalWebsiteClicks,
+        uniqueVisitors,
+        visitorsWithEmail,
       },
       lowStockProducts,
       recentOrders,
       monthlyRevenue: monthlyRevenue.reverse(),
+      visitors: recentVisitors,
     });
   } catch (error) {
     next(error);
