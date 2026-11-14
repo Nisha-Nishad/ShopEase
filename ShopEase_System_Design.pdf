@@ -1,0 +1,564 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R 9 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 11 0 R /F2 12 0 R /F3 13 0 R /F4 14 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 8601 >>
+stream
+BT /F1 8 Tf 0.45 0.47 0.5 rg 1 0 0 1 52 810 Tm (ShopEase: Full-Stack MERN E-Commerce System Design & Architecture) Tj ET
+BT /F1 8 Tf 0.45 0.47 0.5 rg 1 0 0 1 498 26 Tm (Page 1 of 4) Tj ET
+BT /F3 22.5 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 770 Tm (ShopEase: System Design & Complete) Tj ET
+BT /F3 22.5 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 743 Tm (Project Architecture Document) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 720 Tm (Author: Nisha Nishad \(@snishanishad\)  |  Stack: MERN \(MongoDB, Express, React 19, Node.js\)) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 705 Tm (Live Production URL: https://shopease-jiz6.onrender.com  |  Location: Gorakhpur, Uttar Pradesh) Tj ET
+BT /F3 15 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 672 Tm (1. Project Overview & System Architecture) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 650 Tm (Project Name:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 127.2 650 Tm (ShopEase - A real-world, production-level full-stack MERN e-commerce platform.) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 626.5 Tm (System Architecture Summary:) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 58 608.5 Tm (*) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 72 608.5 Tm (3-Tier Cloud Architecture:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 217.4 608.5 Tm (Designed with a decoupled React 19 Single-Page Application) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 72 594 Tm (\(Frontend/\), a stateless Express.js REST API \(Backend/\), and a cloud-hosted MongoDB Atlas) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 72 579.5 Tm (cluster.) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 58 560 Tm (*) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 72 560 Tm (Unified Single-Origin Hosting:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 239 560 Tm (In production on Render, the Express server serves both the) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 72 545.5 Tm (REST API \(/api/*\) and the compiled React build \(Frontend/dist\), preventing third-party) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 72 531 Tm (cookie drops on mobile browsers.) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 58 511.5 Tm (*) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 72 511.5 Tm (End-to-End E-Commerce Lifecycle:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 249.8 511.5 Tm (Covers customer onboarding \(6-Digit Email OTP\), catalog) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 72 497 Tm (search & filters, guest-to-cloud cart merge, UPI/QR & Card checkout, PDF GST tax invoices,) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 72 482.5 Tm (7-day returns, and Admin analytics.) Tj ET
+BT /F3 15 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 451 Tm (2. System Layers & Technology Stack) Tj ET
+q
+0.953 0.953 0.945 rg
+0.86 0.86 0.85 RG 0.7 w
+52 413 118 24 re B
+Q
+BT /F2 9.5 Tf 0.3 0.32 0.35 rg 1 0 0 1 60 421 Tm (System Layer) Tj ET
+q
+0.953 0.953 0.945 rg
+0.86 0.86 0.85 RG 0.7 w
+170 413 228 24 re B
+Q
+BT /F2 9.5 Tf 0.3 0.32 0.35 rg 1 0 0 1 178 421 Tm (Technology & Implementation) Tj ET
+q
+0.953 0.953 0.945 rg
+0.86 0.86 0.85 RG 0.7 w
+398 413 145 24 re B
+Q
+BT /F2 9.5 Tf 0.3 0.32 0.35 rg 1 0 0 1 406 421 Tm (Primary Purpose) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 377 118 36 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 398 Tm (Frontend UI) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 377 228 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 398 Tm (React 19 \(Vite 6\), React Router v7,) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 385 Tm (Lazy-loaded routes) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+398 377 145 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 398 Tm (Fast SPA rendering &) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 385 Tm (navigation) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 341 118 36 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 362 Tm (Styling & Icons) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 341 228 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 362 Tm (Tailwind CSS v4, Lucide Icons, Mobile-first) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 349 Tm (layout) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+398 341 145 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 362 Tm (Modern UI on phone &) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 349 Tm (desktop) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 305 118 36 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 326 Tm (State Management) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 305 228 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 326 Tm (Redux Toolkit \(auth, cart, wishlist,) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 313 Tm (products\) + Axios) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+398 305 145 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 326 Tm (Centralized state & API) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 313 Tm (sync) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 269 118 36 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 290 Tm (Backend API) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 269 228 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 290 Tm (Node.js + Express.js REST API, Modular MVC) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 277 Tm (controllers) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+398 269 145 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 290 Tm (Business logic & request) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 277 Tm (routing) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 233 118 36 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 254 Tm (Database) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 233 228 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 254 Tm (MongoDB Atlas Cloud + Mongoose ODM, Compound) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 241 Tm (indexes) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+398 233 145 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 254 Tm (Persistent cloud data) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 241 Tm (storage) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 197 118 36 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 218 Tm (Authentication) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 197 228 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 218 Tm (JWT in httpOnly + Secure Cookies, bcryptjs,) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 205 Tm (SHA-256 OTP) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+398 197 145 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 218 Tm (XSS-safe session & email) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 205 Tm (OTP) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 161 118 36 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 182 Tm (Security & Validation) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 161 228 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 182 Tm (Helmet, CORS, Express Rate Limit, Zod,) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 169 Tm (NoSQL/XSS Sanitizer) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+398 161 145 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 182 Tm (API defense-in-depth) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 125 118 36 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 146 Tm (Payments & Billing) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 125 228 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 146 Tm (Razorpay HMAC-SHA256, NPCI UPI QR, PDF GST) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 133 Tm (Tax Invoice) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+398 125 145 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 146 Tm (Online checkout & PDF) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 133 Tm (receipts) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 89 118 36 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 110 Tm (Email Service) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 89 228 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 110 Tm (Nodemailer + Gmail SMTP \(HTML Emails + PDF) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 97 Tm (Invoice\)) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+398 89 145 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 110 Tm (OTP, Password Reset &) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 97 Tm (Invoices) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 53 118 36 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 74 Tm (Cloud Deployment) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 53 228 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 74 Tm (Render Web Service + MongoDB Atlas + GitHub) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 61 Tm (Auto-Deploy) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+398 53 145 36 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 406 74 Tm (Live production hosting) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 11 0 R /F2 12 0 R /F3 13 0 R /F4 14 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 6099 >>
+stream
+BT /F1 8 Tf 0.45 0.47 0.5 rg 1 0 0 1 52 810 Tm (ShopEase: Full-Stack MERN E-Commerce System Design & Architecture) Tj ET
+BT /F1 8 Tf 0.45 0.47 0.5 rg 1 0 0 1 498 26 Tm (Page 2 of 4) Tj ET
+BT /F3 15.5 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 774 Tm (3. Complete System Feature Architecture) Tj ET
+BT /F3 12.5 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 748 Tm (A. Customer-Facing Modules) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 728 Tm (1. Account Security & 6-Digit Email OTP:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 273 728 Tm (New user signup generates a SHA-256 hashed 6-digit) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 713.5 Tm (OTP valid for 10 minutes via Gmail SMTP. Includes login, logout, and secure token-based) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 699 Tm (Forgot/Reset Password.) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 679.5 Tm (2. Dynamic Product Catalog \(12 Categories & 78+ Products\):) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 370.20000000000005 679.5 Tm (Server-side pagination,) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 665 Tm (multi-criteria filtering \(category, price range, rating\), sorting, and debounced live search bar) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 650.5 Tm (with instant product suggestions.) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 631 Tm (3. Product Detail, Compare & Verified Reviews:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 305.4 631 Tm (Multi-image gallery, specifications table,) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 616.5 Tm (Similar & Compare Products, Recently Viewed history, and Verified-Buyer Reviews \(only verified) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 602 Tm (purchasers can submit reviews\).) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 582.5 Tm (4. Hybrid Guest & Cloud Cart + Wishlist:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 273 582.5 Tm (Guest users can add/update cart items in) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 568 Tm (localStorage without logging in. Upon login, POST /api/cart/sync automatically merges the guest) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 553.5 Tm (cart into MongoDB.) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 534 Tm (5. Multi-Mode Checkout \(UPI / QR / Card / COD\):) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 310.8 534 Tm (Saved shipping addresses, promo code) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 519.5 Tm (validation \(WELCOME10, FLAT500\), Cash on Delivery, and Online Payment via PhonePe, Google Pay,) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 505 Tm (UPI ID, Scan & Pay QR Code, and Debit Card.) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 485.5 Tm (6. Order Tracking, PDF Tax Invoice & 7-Day Returns:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 332.40000000000003 485.5 Tm (Live 4-step order status tracker,) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 471 Tm (downloadable PDF Tax Invoice \(INV-XXXXXXXX\), order cancellation with stock restoration, and) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 456.5 Tm (7-Day Return/Refund requests on delivered orders.) Tj ET
+BT /F3 12.5 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 427 Tm (B. Admin & Manager Control Center) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 407 Tm (1. Executive Analytics Dashboard:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 235.20000000000002 407 Tm (Real-time KPI cards \(Total Revenue, Orders, Products,) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 392.5 Tm (Registered Users, Web Link Clicks\), 6-month revenue bar chart, and automatic Low-Stock Alerts) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 378 Tm (\(<= 10 units\).) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 358.5 Tm (2. Website Visitor & Email Click Tracker:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 278.4 358.5 Tm (Automatically counts every website link visit in) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 344 Tm (MongoDB, tracks unique visitors & device type \(Mobile/Desktop\), and associates visit counts with) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 329.5 Tm (user Email IDs.) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 310 Tm (3. Catalog, Order, Return & Coupon Management:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 305.4 310 Tm (Full CRUD for Products, Categories, and) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 295.5 Tm (Coupons; order status updates; 7-Day Return approval/rejection with automatic stock restoration;) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 281 Tm (user role management; and CSV export.) Tj ET
+BT /F3 12.5 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 251.5 Tm (C. System Security & Engineering Safeguards) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 58 231.5 Tm (*) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 72 231.5 Tm (Role-Based Access Control \(RBAC\):) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 255.20000000000002 231.5 Tm (Dedicated middleware guards for Customer, Manager, and) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 72 217 Tm (Admin roles.) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 58 197.5 Tm (*) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 72 197.5 Tm (Payload Sanitization & Zod Validation:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 282.20000000000005 197.5 Tm (Strips $gt/$ne NoSQL injection operators and) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 72 183 Tm (<script> XSS tags before controller execution.) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 58 163.5 Tm (*) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 72 163.5 Tm (Server-Side Price & Stock Calculation:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 282.20000000000005 163.5 Tm (All item prices, 18% GST tax, coupon discounts, and) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 72 149 Tm (inventory checks are computed on the server.) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 58 129.5 Tm (*) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 72 129.5 Tm (Cryptographic Payment Verification:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 266 129.5 Tm (Verifies Razorpay HMAC-SHA256 payment signatures on) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 72 115 Tm (the backend before marking orders paid.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 11 0 R /F2 12 0 R /F3 13 0 R /F4 14 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 6401 >>
+stream
+BT /F1 8 Tf 0.45 0.47 0.5 rg 1 0 0 1 52 810 Tm (ShopEase: Full-Stack MERN E-Commerce System Design & Architecture) Tj ET
+BT /F1 8 Tf 0.45 0.47 0.5 rg 1 0 0 1 498 26 Tm (Page 3 of 4) Tj ET
+BT /F3 15.5 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 774 Tm (4. Production Folder Structure) Tj ET
+q
+0.965 0.965 0.96 rg
+0.86 0.86 0.85 RG 0.6 w
+52 432 491 326 re B
+Q
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 740 Tm (ShopEase/) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 728.7 Tm (|-- Frontend/                         # React 19 + Vite 6 + Tailwind CSS v4) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 717.4 Tm (|   |-- public/                       # ShopEase SVG Favicon & SPA routing rules) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 706.1 Tm (|   |-- src/) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 694.8 Tm (|   |   |-- components/               # Navbar, Footer, ProductCard) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 683.5 Tm (|   |   |-- pages/                    # Home, Products, ProductDetail, Cart, Wishlist,) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 672.2 Tm (|   |   |                             # Checkout, Orders, OrderDetail, Login, Register) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 660.9 Tm (|   |   |-- pages/admin/              # AdminDashboard, ManageProducts, ManageOrders,) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 649.6 Tm (|   |   |                             # ManageUsersAndCoupons) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 638.3 Tm (|   |   |-- redux/slices/             # authSlice, cartSlice, wishlistSlice, productSlice) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 627 Tm (|   |   |-- routes/                   # ProtectedRoute, AdminRoute) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 615.7 Tm (|   |   |-- services/                 # api.js \(Axios instance with credentials\)) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 604.4 Tm (|   |   |-- utils/                    # razorpayCheckout.js, downloadReceipt.js, formatPrice) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 593.1 Tm (|   |   `-- App.jsx                   # Lazy routes & automatic visitor click tracker) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 581.8 Tm (|) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 570.5 Tm (|-- Backend/                          # Node.js + Express.js + MongoDB REST API) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 559.2 Tm (|   |-- config/                       # db.js \(MongoDB Atlas connection\)) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 547.9 Tm (|   |-- controllers/                  # auth, product, category, cart, wishlist,) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 536.6 Tm (|   |                                 # order, payment, coupon, admin controllers) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 525.3 Tm (|   |-- middleware/                   # authMiddleware, securityMiddleware, errorMiddleware) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 514 Tm (|   |-- models/                       # User, Product, Category, Order, Cart, Wishlist,) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 502.7 Tm (|   |                                 # Coupon, Visitor Mongoose schemas) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 491.4 Tm (|   |-- routes/                       # Express modular route definitions \(/api/*\)) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 480.09999999999997 Tm (|   |-- utils/                        # generateToken, sendEmail, invoiceGenerator, seeder) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 468.79999999999995 Tm (|   |-- validators/                   # Zod request validation schemas) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 457.5 Tm (|   `-- server.js                     # Express app entry point & static SPA server) Tj ET
+BT /F4 8.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 446.2 Tm (`-- package.json                      # Workspace build, start, seed & test scripts) Tj ET
+BT /F3 15.5 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 404 Tm (5. Database Schema Design \(MongoDB Collections\)) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 380 Tm (User:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 84 380 Tm (name, email \(unique\), password \(bcrypt hashed\), role \(customer/manager/admin\), phone,) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 365.5 Tm (addresses[], isVerified, emailVerificationOTP \(SHA-256\), resetPasswordToken, createdAt) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 346 Tm (Product:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 100.2 346 Tm (name, description, price, discountPrice, category \(ObjectId ref\), brand, stock,) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 331.5 Tm (images[], specifications[{ key, value }], reviews[{ user, name, rating, comment }], ratings,) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 317 Tm (numReviews) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 297.5 Tm (Category:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 105.6 297.5 Tm (name \(unique\), slug \(unique\), description, image \(12 seeded e-commerce categories\)) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 278 Tm (Order:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 89.4 278 Tm (user \(ref\), invoiceNumber \(INV-XXXXXXXX\), orderItems[] \(product, name, price, qty,) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 263.5 Tm (image\), shippingAddress, paymentMethod \(COD/Online\), paymentResult, itemsPrice, taxPrice \(18%) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 249 Tm (GST\), shippingPrice, discountAmount, totalPrice, isPaid, orderStatus, returnRequest, deliveredAt) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 229.5 Tm (Cart & Wishlist:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 143.4 229.5 Tm (user \(ObjectId ref\), items[{ product, quantity }] / products[ObjectId]) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 210 Tm (Coupon:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 94.80000000000001 210 Tm (code \(WELCOME10, FLAT500\), discountType \(percentage/flat\), discountValue,) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 195.5 Tm (minOrderAmount, expiryDate) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 176 Tm (Visitor:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 100.2 176 Tm (visitorId \(unique\), user \(ref\), email, name, visitCount, deviceType \(Mobile/Desktop\),) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 161.5 Tm (lastPath, lastVisitedAt) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 11 0 R /F2 12 0 R /F3 13 0 R /F4 14 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 7266 >>
+stream
+BT /F1 8 Tf 0.45 0.47 0.5 rg 1 0 0 1 52 810 Tm (ShopEase: Full-Stack MERN E-Commerce System Design & Architecture) Tj ET
+BT /F1 8 Tf 0.45 0.47 0.5 rg 1 0 0 1 498 26 Tm (Page 4 of 4) Tj ET
+BT /F3 15.5 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 774 Tm (6. REST API Endpoints \(Backend\)) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 750 Tm (Auth & Visitor:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 138 750 Tm (POST /api/auth/register , POST /api/auth/verify-otp , POST /api/auth/login ,) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 735.5 Tm (POST /api/auth/logout , POST /api/auth/forgot-password , PUT /api/auth/reset-password/:token ,) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 721 Tm (POST /api/auth/track-visit) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 701.5 Tm (Products & Reviews:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 159.60000000000002 701.5 Tm (GET /api/products \(search, category, price, rating, sort, page\), GET) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 687 Tm (/api/products/suggestions , GET /api/products/:id , POST /api/products/:id/reviews \(verified) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 672.5 Tm (buyers\), POST/PUT/DELETE \(admin\)) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 653 Tm (Categories:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 116.4 653 Tm (GET /api/categories , POST /api/categories \(admin\), PUT/DELETE /api/categories/:id) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 638.5 Tm (\(admin\)) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 619 Tm (Cart & Wishlist:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 143.4 619 Tm (GET /api/cart , POST /api/cart , POST /api/cart/sync \(guest merge\), POST) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 604.5 Tm (/api/wishlist/toggle) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 585 Tm (Orders & Returns:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 148.8 585 Tm (POST /api/orders , GET /api/orders/myorders , GET /api/orders/:id , PUT) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 570.5 Tm (/api/orders/:id/cancel , POST /api/orders/:id/return \(7-day window\), PUT /api/orders/:id/return) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 556 Tm (\(admin\), GET /api/orders/:id/invoice) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 536.5 Tm (Payments & Coupons:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 159.60000000000002 536.5 Tm (POST /api/payment/create-order , POST /api/payment/verify \(HMAC-SHA256\),) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 522 Tm (POST /api/coupons/validate) Tj ET
+BT /F2 10 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 502.5 Tm (Admin Analytics:) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 143.4 502.5 Tm (GET /api/admin/stats \(KPIs, revenue, low stock, visitor logs\), GET) Tj ET
+BT /F1 10 Tf 0.18 0.2 0.22 rg 1 0 0 1 52 488 Tm (/api/admin/users , GET /api/admin/reports/sales) Tj ET
+BT /F3 15.5 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 458.5 Tm (7. Core System Workflows \(Step-by-Step Execution\)) Tj ET
+q
+0.953 0.953 0.945 rg
+0.86 0.86 0.85 RG 0.7 w
+52 420.5 118 24 re B
+Q
+BT /F2 9.5 Tf 0.3 0.32 0.35 rg 1 0 0 1 60 428.5 Tm (Workflow) Tj ET
+q
+0.953 0.953 0.945 rg
+0.86 0.86 0.85 RG 0.7 w
+170 420.5 373 24 re B
+Q
+BT /F2 9.5 Tf 0.3 0.32 0.35 rg 1 0 0 1 178 428.5 Tm (Step-by-Step System Execution Flow) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 371.5 118 49 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 405.5 Tm (1. Email OTP Signup) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 371.5 373 49 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 405.5 Tm (User submits /register -> Backend hashes 6-digit OTP \(SHA-256, 10m expiry\)) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 392.5 Tm (-> Sends OTP via Gmail SMTP -> User submits /verify-otp -> Account) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 379.5 Tm (activated & httpOnly JWT cookie issued.) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 322.5 118 49 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 356.5 Tm (2. Hybrid Cart Sync) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 322.5 373 49 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 356.5 Tm (Guest adds items to localStorage -> Logs in or verifies OTP -> Frontend) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 343.5 Tm (calls POST /api/cart/sync -> Backend merges guest items with MongoDB cart) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 330.5 Tm (and returns unified cart state.) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 273.5 118 49 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 307.5 Tm (3. Online Checkout) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 273.5 373 49 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 307.5 Tm (POST /api/orders verifies & deducts stock -> Payment modal creates session) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 294.5 Tm (-> User pays via UPI/QR/Card -> /payment/verify checks HMAC-SHA256 -> Marks) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 281.5 Tm (order Confirmed.) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 224.5 118 49 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 258.5 Tm (4. Invoice & Email) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 224.5 373 49 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 258.5 Tm (On order placement or online payment verification -> Backend generates HTML) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 245.5 Tm (confirmation email and attaches downloadable Tax Invoice PDF \(INV-XXXXXXXX\)) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 232.5 Tm (-> Delivered via Gmail SMTP.) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 175.5 118 49 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 209.5 Tm (5. 7-Day Return Flow) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 175.5 373 49 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 209.5 Tm (Delivered order within 7 days -> Customer submits return reason -> Admin) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 196.5 Tm (approves return -> Backend automatically restores product stock & updates) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 183.5 Tm (refund status.) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+52 126.5 118 49 re B
+Q
+BT /F2 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 60 160.5 Tm (6. Visitor Tracking) Tj ET
+q
+1 1 1 rg
+0.86 0.86 0.85 RG 0.7 w
+170 126.5 373 49 re B
+Q
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 160.5 Tm (Visitor opens site link -> App.jsx calls POST /api/auth/track-visit ->) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 147.5 Tm (Increments visitCount in MongoDB and links visitor Email & Name when logged) Tj ET
+BT /F1 9.3 Tf 0.11 0.12 0.13 rg 1 0 0 1 178 134.5 Tm (in -> Displayed live in Admin Panel.) Tj ET
+BT /F3 15.5 Tf 0.11 0.12 0.13 rg 1 0 0 1 52 102.5 Tm (8. Live Deployment & Author Information) Tj ET
+q
+0.965 0.965 0.96 rg
+0.86 0.86 0.85 RG 0.7 w
+52 4.5 491 84 re B
+Q
+BT /F2 9.8 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 70.5 Tm (Project Name      :  ShopEase - Full-Stack MERN E-Commerce Platform) Tj ET
+BT /F2 9.8 Tf 0.11 0.12 0.13 rg 1 0 0 1 66 53.5 Tm (Live Website URL  :  https://shopease-jiz6.onrender.com) Tj ET
+BT /F1 9.8 Tf 0.18 0.2 0.22 rg 1 0 0 1 66 36.5 Tm (GitHub Repository :  https://github.com/Nisha-Nishad/ShopEase) Tj ET
+BT /F1 9.8 Tf 0.18 0.2 0.22 rg 1 0 0 1 66 19.5 Tm (Developed By      :  Nisha Nishad \(@snishanishad\) - Gorakhpur, Uttar Pradesh, India) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+12 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+13 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+14 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000133 00000 n 
+0000000293 00000 n 
+0000008946 00000 n 
+0000009106 00000 n 
+0000015257 00000 n 
+0000015417 00000 n 
+0000021870 00000 n 
+0000022031 00000 n 
+0000029350 00000 n 
+0000029448 00000 n 
+0000029551 00000 n 
+0000029651 00000 n 
+trailer
+<< /Size 15 /Root 1 0 R >>
+startxref
+29747
+%%EOF
