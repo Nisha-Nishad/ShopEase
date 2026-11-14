@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="seGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#3730a3" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#seGrad)" />
+  <!-- ShoppingBag Icon matching Lucide ShoppingBag in Navbar & Footer -->
+  <path
+    d="M20 14L14 22V46C14 48.2091 15.7909 50 18 50H46C48.2091 50 50 48.2091 50 46V22L44 14H20Z"
+    stroke="#ffffff"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M14 22H50"
+    stroke="#ffffff"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M40 28C40 32.4183 36.4183 36 32 36C27.5817 36 24 32.4183 24 28"
+    stroke="#a5b4fc"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
