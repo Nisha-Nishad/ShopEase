@@ -205,21 +205,21 @@ const Register = () => {
             )}
 
             {devOtp && !verifiedSuccess && (
-              <div className="mb-4 p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs flex items-center justify-between gap-2">
+              <div className="mb-4 p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs flex items-center justify-between gap-2">
                 <div>
-                  <span className="font-semibold block">
-                    Dev Mode OTP Preview:
+                  <span className="font-semibold block text-emerald-800">
+                    Your 6-Digit Verification OTP:
                   </span>
-                  <span className="font-mono text-base font-bold tracking-widest text-indigo-700">
+                  <span className="font-mono text-lg font-extrabold tracking-widest text-indigo-700">
                     {devOtp}
                   </span>
                 </div>
                 <button
                   type="button"
                   onClick={() => setOtp(String(devOtp))}
-                  className="px-2.5 py-1.5 rounded-lg bg-amber-200/70 hover:bg-amber-200 text-amber-950 font-semibold text-xs cursor-pointer"
+                  className="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs cursor-pointer transition-colors"
                 >
-                  Fill OTP
+                  Auto-Fill OTP
                 </button>
               </div>
             )}

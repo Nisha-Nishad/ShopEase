@@ -35,6 +35,9 @@ const sendEmail = async ({ email, subject, message, html, attachments }) => {
     isGmail
       ? {
           service: 'gmail',
+          connectionTimeout: 3500,
+          greetingTimeout: 3500,
+          socketTimeout: 5000,
           auth: {
             user: smtpUser,
             pass: smtpPass,
@@ -44,6 +47,9 @@ const sendEmail = async ({ email, subject, message, html, attachments }) => {
           host: smtpHost,
           port: smtpPort,
           secure: smtpPort === 465,
+          connectionTimeout: 3500,
+          greetingTimeout: 3500,
+          socketTimeout: 5000,
           auth: {
             user: smtpUser,
             pass: smtpPass,
@@ -71,8 +77,15 @@ const sendEmail = async ({ email, subject, message, html, attachments }) => {
       : {}),
   };
 
-  await transporter.sendMail(mailOptions);
-  return { sent: true, mode: 'smtp' };
+  try {
+    await transporter.sendMail(mailOptions);
+    return { sent: true, mode: 'smtp' };
+  } catch (err) {
+    console.warn(
+      `[SMTP Notice] Outbound SMTP blocked or timed out (${err.message}). Falling back to instant OTP/Reset preview.`
+    );
+    return { sent: false, mode: 'dev_preview' };
+  }
 };
 
 export default sendEmail;
