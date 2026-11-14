@@ -116,7 +116,7 @@ app.use('/api/payment', paymentRoutes);
 app.use('/api/admin', adminRoutes);
 
 // 8. Serve React Frontend Build in Production (Single-Server Full-Stack Deployment Support)
-const clientDistPath = path.resolve(__dirname, '../client/dist');
+const clientDistPath = path.resolve(__dirname, '../Frontend/dist');
 if (
   process.env.NODE_ENV === 'production' &&
   fs.existsSync(path.join(clientDistPath, 'index.html'))

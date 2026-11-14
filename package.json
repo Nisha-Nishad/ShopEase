@@ -4,17 +4,19 @@
   "private": true,
   "description": "ShopEase Full-Stack MERN E-Commerce Platform",
   "workspaces": [
-    "client",
-    "server"
+    "Frontend",
+    "Backend"
   ],
   "scripts": {
-    "dev:server": "npm --workspace=server run dev",
-    "dev:client": "npm --workspace=client run dev",
-    "build": "npm install --include=dev && npm --workspace=client run build",
-    "build:client": "npm --workspace=client run build",
-    "start": "npm --workspace=server run start",
-    "start:server": "npm --workspace=server run start",
-    "seed": "npm --workspace=server run seed",
-    "test": "npm --workspace=server run test"
+    "dev:backend": "npm --workspace=Backend run dev",
+    "dev:frontend": "npm --workspace=Frontend run dev",
+    "dev:server": "npm --workspace=Backend run dev",
+    "dev:client": "npm --workspace=Frontend run dev",
+    "build": "npm install --include=dev && npm --workspace=Frontend run build",
+    "build:client": "npm --workspace=Frontend run build",
+    "start": "npm --workspace=Backend run start",
+    "start:server": "npm --workspace=Backend run start",
+    "seed": "npm --workspace=Backend run seed",
+    "test": "npm --workspace=Backend run test"
   }
 }
