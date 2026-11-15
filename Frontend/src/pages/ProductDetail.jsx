@@ -369,16 +369,16 @@ const ProductDetail = () => {
             )}
 
             {/* Quantity & Add to Cart */}
-            <div className="pt-4 flex flex-wrap items-center gap-4">
-              <div className="flex items-center border border-slate-300 rounded-xl overflow-hidden">
+            <div className="pt-3 sm:pt-4 flex items-center gap-2 sm:gap-4">
+              <div className="flex items-center border border-slate-300 rounded-lg sm:rounded-xl overflow-hidden shrink-0">
                 <button
                   type="button"
                   onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                  className="px-3.5 py-2 text-slate-700 hover:bg-slate-100 font-bold cursor-pointer"
+                  className="px-2.5 py-1.5 sm:px-3.5 sm:py-2 text-slate-700 hover:bg-slate-100 font-bold text-sm cursor-pointer"
                 >
                   -
                 </button>
-                <span className="px-4 py-2 text-sm font-semibold text-slate-900">
+                <span className="px-2.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold text-slate-900">
                   {quantity}
                 </span>
                 <button
@@ -388,7 +388,7 @@ const ProductDetail = () => {
                       Math.min(Math.max(1, availableStock), q + 1)
                     )
                   }
-                  className="px-3.5 py-2 text-slate-700 hover:bg-slate-100 font-bold cursor-pointer"
+                  className="px-2.5 py-1.5 sm:px-3.5 sm:py-2 text-slate-700 hover:bg-slate-100 font-bold text-sm cursor-pointer"
                 >
                   +
                 </button>
@@ -398,7 +398,7 @@ const ProductDetail = () => {
                 type="button"
                 disabled={availableStock <= 0}
                 onClick={handleAddToCart}
-                className={`flex-1 inline-flex items-center justify-center gap-2 text-white font-semibold px-6 py-3 rounded-xl transition-colors cursor-pointer disabled:bg-slate-300 ${
+                className={`flex-1 inline-flex items-center justify-center gap-1.5 sm:gap-2 text-white text-xs sm:text-base font-semibold px-3.5 py-2 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl transition-colors cursor-pointer disabled:bg-slate-300 ${
                   addedMessage
                     ? 'bg-emerald-600'
                     : 'bg-indigo-600 hover:bg-indigo-700'
@@ -406,12 +406,12 @@ const ProductDetail = () => {
               >
                 {addedMessage ? (
                   <>
-                    <Check className="w-5 h-5" />
+                    <Check className="w-4 h-4 sm:w-5 sm:h-5" />
                     <span>Added to Cart!</span>
                   </>
                 ) : (
                   <>
-                    <ShoppingCart className="w-5 h-5" />
+                    <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5" />
                     <span>
                       {availableStock > 0 ? 'Add to Cart' : 'Out of Stock'}
                     </span>
@@ -423,14 +423,14 @@ const ProductDetail = () => {
                 type="button"
                 onClick={() => dispatch(toggleWishlist(product))}
                 title={isWishlisted ? 'Remove from Wishlist' : 'Save to Wishlist'}
-                className={`p-3 rounded-xl border transition-colors cursor-pointer ${
+                className={`p-2 sm:p-3 rounded-lg sm:rounded-xl border transition-colors cursor-pointer shrink-0 ${
                   isWishlisted
                     ? 'border-rose-300 bg-rose-50 text-rose-600'
                     : 'border-slate-300 text-slate-700 hover:text-rose-600 hover:border-rose-300'
                 }`}
               >
                 <Heart
-                  className={`w-5 h-5 ${isWishlisted ? 'fill-rose-500 text-rose-500' : ''}`}
+                  className={`w-4 h-4 sm:w-5 sm:h-5 ${isWishlisted ? 'fill-rose-500 text-rose-500' : ''}`}
                 />
               </button>
             </div>

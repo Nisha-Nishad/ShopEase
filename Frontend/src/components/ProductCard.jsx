@@ -151,7 +151,8 @@ const ProductCard = ({ product }) => {
             type="button"
             disabled={product.stock <= 0}
             onClick={handleQuickAdd}
-            className={`inline-flex items-center justify-center gap-1 sm:gap-1.5 text-white text-[11px] sm:text-xs font-semibold px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-lg sm:rounded-xl transition-colors cursor-pointer shrink-0 disabled:bg-slate-300 ${
+            aria-label={added ? 'Added to Cart' : 'Add to Cart'}
+            className={`inline-flex items-center justify-center gap-1.5 text-white text-xs font-semibold w-8 h-8 sm:w-auto sm:h-auto sm:px-3 sm:py-2 rounded-lg sm:rounded-xl transition-colors cursor-pointer shrink-0 disabled:bg-slate-300 ${
               added
                 ? 'bg-emerald-600'
                 : 'bg-slate-900 hover:bg-indigo-600'
@@ -160,12 +161,12 @@ const ProductCard = ({ product }) => {
             {added ? (
               <>
                 <Check className="w-3.5 h-3.5" />
-                <span className="hidden xs:inline sm:inline">Added</span>
+                <span className="hidden sm:inline">Added</span>
               </>
             ) : (
               <>
                 <ShoppingCart className="w-3.5 h-3.5" />
-                <span>Add</span>
+                <span className="hidden sm:inline">Add</span>
               </>
             )}
           </button>
