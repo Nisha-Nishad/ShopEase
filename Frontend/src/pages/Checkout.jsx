@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { syncAndMergeCart } from '../redux/slices/cartSlice';
+import { syncAndMergeCart, updateItemQuantity } from '../redux/slices/cartSlice';
 import { updateUserProfile } from '../redux/slices/authSlice';
 import api from '../services/api';
 import { formatPrice } from '../utils/formatPrice';
@@ -811,7 +811,42 @@ const Checkout = () => {
                       <p className="font-semibold text-slate-800 truncate">
                         {p.name}
                       </p>
-                      <p className="text-slate-400">Qty: {item.quantity}</p>
+                      <div className="mt-1 inline-flex items-center border border-slate-200 rounded-lg overflow-hidden bg-slate-50">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            dispatch(
+                              updateItemQuantity({
+                                itemId: item._id,
+                                quantity: item.quantity - 1,
+                              })
+                            )
+                          }
+                          aria-label="Decrease quantity"
+                          className="px-2 py-0.5 text-slate-700 hover:bg-slate-200 font-bold cursor-pointer"
+                        >
+                          -
+                        </button>
+                        <span className="px-2.5 py-0.5 font-semibold text-slate-900 bg-white">
+                          {item.quantity}
+                        </span>
+                        <button
+                          type="button"
+                          disabled={item.quantity >= (p.stock || 99)}
+                          onClick={() =>
+                            dispatch(
+                              updateItemQuantity({
+                                itemId: item._id,
+                                quantity: item.quantity + 1,
+                              })
+                            )
+                          }
+                          aria-label="Increase quantity"
+                          className="px-2 py-0.5 text-slate-700 hover:bg-slate-200 disabled:opacity-40 font-bold cursor-pointer"
+                        >
+                          +
+                        </button>
+                      </div>
                     </div>
                   </div>
                   <span className="font-bold text-slate-900 shrink-0">

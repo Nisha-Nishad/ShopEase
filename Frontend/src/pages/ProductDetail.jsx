@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   fetchProductDetails,
@@ -25,11 +25,13 @@ import {
   Sparkles,
   ArrowRight,
   Clock,
+  Zap,
 } from 'lucide-react';
 
 const ProductDetail = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const {
     currentProduct: product,
     relatedProducts,
@@ -164,7 +166,7 @@ const ProductDetail = () => {
     dispatch(
       addItemToCart({
         product,
-        quantity,
+        quantity: 1,
         variant: {
           size: activeVariant?.size || '',
           color: activeVariant?.color || '',
@@ -173,6 +175,21 @@ const ProductDetail = () => {
     );
     setAddedMessage(true);
     setTimeout(() => setAddedMessage(false), 1800);
+  };
+
+  const handleBuyNow = async () => {
+    if (availableStock <= 0) return;
+    await dispatch(
+      addItemToCart({
+        product,
+        quantity: 1,
+        variant: {
+          size: activeVariant?.size || '',
+          color: activeVariant?.color || '',
+        },
+      })
+    );
+    navigate('/checkout');
   };
 
   const handleReviewSubmit = async (e) => {
@@ -368,53 +385,37 @@ const ProductDetail = () => {
               </div>
             )}
 
-            {/* Quantity & Add to Cart */}
-            <div className="pt-3 sm:pt-4 flex items-center gap-2 sm:gap-4">
-              <div className="flex items-center border border-slate-300 rounded-lg sm:rounded-xl overflow-hidden shrink-0">
-                <button
-                  type="button"
-                  onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                  className="px-2.5 py-1.5 sm:px-3.5 sm:py-2 text-slate-700 hover:bg-slate-100 font-bold text-sm cursor-pointer"
-                >
-                  -
-                </button>
-                <span className="px-2.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold text-slate-900">
-                  {quantity}
-                </span>
-                <button
-                  type="button"
-                  onClick={() =>
-                    setQuantity((q) =>
-                      Math.min(Math.max(1, availableStock), q + 1)
-                    )
-                  }
-                  className="px-2.5 py-1.5 sm:px-3.5 sm:py-2 text-slate-700 hover:bg-slate-100 font-bold text-sm cursor-pointer"
-                >
-                  +
-                </button>
-              </div>
+            {/* Buy Now, Add to Cart & Wishlist */}
+            <div className="pt-3 sm:pt-4 flex items-center gap-2 sm:gap-3">
+              <button
+                type="button"
+                disabled={availableStock <= 0}
+                onClick={handleBuyNow}
+                className="flex-1 inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-indigo-600 hover:bg-indigo-700 disabled:bg-slate-300 text-white text-xs sm:text-sm font-semibold px-3 py-2.5 sm:px-5 sm:py-3 rounded-lg sm:rounded-xl transition-colors cursor-pointer"
+              >
+                <Zap className="w-4 h-4 sm:w-4 sm:h-4" />
+                <span>{availableStock > 0 ? 'Buy Now' : 'Out of Stock'}</span>
+              </button>
 
               <button
                 type="button"
                 disabled={availableStock <= 0}
                 onClick={handleAddToCart}
-                className={`flex-1 inline-flex items-center justify-center gap-1.5 sm:gap-2 text-white text-xs sm:text-base font-semibold px-3.5 py-2 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl transition-colors cursor-pointer disabled:bg-slate-300 ${
+                className={`flex-1 inline-flex items-center justify-center gap-1.5 sm:gap-2 text-white text-xs sm:text-sm font-semibold px-3 py-2.5 sm:px-5 sm:py-3 rounded-lg sm:rounded-xl transition-colors cursor-pointer disabled:bg-slate-300 ${
                   addedMessage
                     ? 'bg-emerald-600'
-                    : 'bg-indigo-600 hover:bg-indigo-700'
+                    : 'bg-slate-900 hover:bg-slate-800'
                 }`}
               >
                 {addedMessage ? (
                   <>
-                    <Check className="w-4 h-4 sm:w-5 sm:h-5" />
-                    <span>Added to Cart!</span>
+                    <Check className="w-4 h-4" />
+                    <span>Added!</span>
                   </>
                 ) : (
                   <>
-                    <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5" />
-                    <span>
-                      {availableStock > 0 ? 'Add to Cart' : 'Out of Stock'}
-                    </span>
+                    <ShoppingCart className="w-4 h-4" />
+                    <span>Add to Cart</span>
                   </>
                 )}
               </button>
@@ -423,7 +424,7 @@ const ProductDetail = () => {
                 type="button"
                 onClick={() => dispatch(toggleWishlist(product))}
                 title={isWishlisted ? 'Remove from Wishlist' : 'Save to Wishlist'}
-                className={`p-2 sm:p-3 rounded-lg sm:rounded-xl border transition-colors cursor-pointer shrink-0 ${
+                className={`p-2.5 sm:p-3 rounded-lg sm:rounded-xl border transition-colors cursor-pointer shrink-0 ${
                   isWishlisted
                     ? 'border-rose-300 bg-rose-50 text-rose-600'
                     : 'border-slate-300 text-slate-700 hover:text-rose-600 hover:border-rose-300'
