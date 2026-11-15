@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MapPin, ShieldCheck, ShoppingBag } from 'lucide-react';
+import { Heart, MapPin, ShieldCheck, ShoppingBag } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -120,18 +120,22 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} ShopEase. All rights reserved.
             </span>
             <span className="hidden sm:inline text-slate-700">&bull;</span>
-            <span>
+            <span className="inline-flex items-center gap-1">
               Developed by{' '}
               <span className="text-indigo-400 font-semibold">
                 @snishanishad
               </span>
+              <Heart
+                className="w-3.5 h-3.5 text-rose-500 fill-rose-500 inline-block"
+                aria-hidden="true"
+              />
             </span>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-2">
             <span className="inline-flex items-center gap-1 text-[11px] text-emerald-400 font-semibold mr-1">
               <ShieldCheck className="w-3.5 h-3.5" />
-              100% Secure Payments:
+              Secure Payments:
             </span>
             {['PhonePe', 'Google Pay', 'UPI QR', 'Visa', 'MasterCard', 'RuPay'].map(
               (badge) => (
